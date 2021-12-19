@@ -1,0 +1,463 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --green: #006763;
+  --yellow: #fccc8a;
+  --lightgrey: #e3e3e3;
+  --darkgrey: #aaaaaad2;
+  --offblack: #080808;
+  --offwhite: #f0f0f0;
+  --font1: "Poppins", sans-serif;
+  --font2: "Outfit", sans-serif;
+  --font3: "Oswald", sans-serif;
+}
+
+/* ANIMATIONS */
+
+.txt-appear {
+  animation: text-appear 0.4s ease 1;
+}
+
+@keyframes text-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
+.burger-dissapear {
+  animation: dissapear 0.1s ease 1;
+}
+
+@keyframes dissapear {
+  to {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.burger-appear {
+  animation: appear 0.1s ease 1;
+}
+
+@keyframes appear {
+  to {
+    transform: rotate(-360deg);
+    opacity: 100;
+  }
+}
+
+.show-menu {
+  animation: slide-in 0.5s ease 1;
+}
+
+@keyframes slide-in {
+  from {
+    right: -40vh;
+  }
+  to {
+    right: 0;
+  }
+}
+
+/* .hide-menu {
+  animation: slide-out 0.5s ease 1;
+}
+
+@keyframes slide-out {
+  from {
+    right: 0;
+  }
+  to {
+    right: -40vh;
+  }
+} */
+
+/* GLOBAL STYLING */
+
+.hidden {
+  visibility: hidden;
+}
+
+.hidden2 {
+  display: none !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font1);
+  margin: 0;
+  color: var(--offblack);
+}
+
+main {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+section {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+/* HEADER */
+
+#header {
+  background: rgba(227, 227, 227, 0.28);
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.2px);
+  -webkit-backdrop-filter: blur(4.2px);
+  border: 1px solid rgba(227, 227, 227, 0.65);
+  position: fixed;
+  display: flex;
+  padding-right: 2rem;
+  padding-left: 1rem;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+#header span {
+  align-self: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+#header-container {
+  align-self: center;
+  display: flex;
+  gap: 2rem;
+}
+
+#header-cta {
+  padding: 0.7rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1rem;
+  background: linear-gradient(
+    180deg,
+    var(--green) 35%,
+    rgba(2, 145, 136, 0.6488970588235294) 100%
+  );
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 1px 5.5px 6.5px 2.5px var(--lightgrey);
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+#header-cta a {
+  color: white;
+  text-decoration: none;
+}
+
+#header-cta:hover {
+  box-shadow: 1px 1.5px 6.5px 2.5px var(--darkgrey);
+  transform: scale(1.01);
+}
+
+#header-cta:active {
+  box-shadow: 1px 5.5px 6.5px 2.5px var(--darkgrey);
+  transform: translateY(1px);
+}
+
+/* BURGER MENU */
+
+.burger-menu {
+  background: rgba(207, 207, 207, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.2px);
+  -webkit-backdrop-filter: blur(4.2px);
+  border-left: 1px solid rgba(227, 227, 227, 0.65);
+  position: absolute;
+  right: 0;
+  top: 7.4vh;
+  padding: 1rem;
+  height: 92.6vh;
+  width: 22vw;
+}
+
+.burger-menu ul li a {
+  text-decoration: none;
+  color: var(--offblack);
+}
+
+.burger-menu ul {
+  list-style: none;
+}
+
+.burger-menu ul li {
+  margin-right: 1.8rem;
+  margin-left: 1.8rem;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+  text-align: center;
+  border-bottom: 1px solid var(--darkgrey);
+}
+
+.some-icons {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  border-bottom: none;
+}
+
+/* HERO SECTION */
+
+#hero-section {
+  background-image: url(/assets/hero-bg.svg);
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 100vh;
+  padding-top: 20vh;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#hero-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+}
+
+#hero-left h1 {
+  font-size: 2.5rem;
+  font-weight: 550;
+  margin-bottom: 1rem;
+}
+
+#hero-left h3 {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+#hero-cta {
+  padding-top: 2rem;
+  display: flex;
+  gap: 2.5em;
+}
+
+#hero-cta a {
+  text-decoration: none;
+}
+
+#ab-us {
+  padding: 0.7rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1rem;
+  background: white;
+  outline: none;
+  border: 1px solid var(--green);
+  border-radius: 20px;
+  box-shadow: 1px 5.5px 6.5px 2.5px var(--lightgrey);
+}
+
+#ab-us a {
+  color: var(--green);
+}
+
+#book-demo {
+  padding: 0.7rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1rem;
+  background: linear-gradient(
+    180deg,
+    var(--green) 35%,
+    rgba(2, 145, 136, 0.6488970588235294) 100%
+  );
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 1px 5.5px 6.5px 2.5px var(--lightgrey);
+}
+
+#book-demo a {
+  color: white;
+}
+
+#book-demo:hover,
+#ab-us:hover {
+  box-shadow: 1px 5.5px 6.5px 2.5px var(--darkgrey);
+  transform: scale(1.01);
+}
+
+#book-demo:active,
+#ab-us:active {
+  box-shadow: 1px 5.5px 6.5px 2.5px var(--darkgrey);
+  transform: translateY(1px);
+}
+
+#arrow-down {
+  color: var(--yellow);
+  font-size: 2.5rem;
+  margin-left: 48%;
+  margin-top: 2%;
+}
+
+/* HOW TO USE IT SECTION */
+#tut-section {
+  padding-top: 11vh;
+  background-image: url("/assets/tut-bg.svg");
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#tut-section h2 {
+  font-weight: 300;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#tut-section h2 span {
+  color: var(--yellow);
+  font-weight: 500;
+}
+
+.tut-steps {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 3.3rem;
+  align-items: center;
+}
+
+.arrow-prev,
+.arrow-next {
+  color: var(--yellow);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.arrow-prev:hover,
+.arrow-next:hover {
+  filter: brightness(110%);
+}
+
+.step-info {
+  display: flex;
+  gap: 3rem;
+}
+
+.steps-description {
+  padding-top: 6rem;
+  font-size: 1.3rem;
+  list-style: none;
+  counter-reset: li;
+}
+
+.steps-description li::before {
+  content: counter(li);
+  color: var(--yellow);
+  font-weight: 800;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.steps-description li {
+  counter-increment: li;
+}
+
+.dots-container {
+  padding-top: 0.8rem;
+  display: table;
+  margin: 0 auto;
+}
+
+.steps-dots {
+  list-style: none;
+  margin: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  color: var(--green);
+}
+
+/* BENEFITS SECTION */
+
+#benefits {
+  padding-top: 11vh;
+  background-image: url("/assets/benefits-bg.svg");
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#benefits h2 {
+  font-weight: 500;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--green);
+}
+
+.benefits-slide {
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.benefit-card {
+  background: rgba(226, 226, 226, 0.445);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.2px);
+  -webkit-backdrop-filter: blur(4.2px);
+  border-left: 1px solid rgba(227, 227, 227, 0.65);
+  border-radius: 16px;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  gap: 4rem;
+  padding: 1rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  align-items: center;
+  height: 72vh;
+}
+
+.benefit-container {
+  display: flex;
+}
+
+.benefit-container {
+  margin: 4rem;
+}
+
+.benefit-container img {
+  align-self: top;
+  max-height: 2%;
+}
+
+.benefits-txt {
+  margin-top: 0;
+}
+
+.benefits-txt h3 {
+  color: var(--yellow);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.benefits-txt p {
+  font-weight: 400;
+  line-height: 2rem;
+}
