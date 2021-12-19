@@ -103,6 +103,7 @@ function showStep2() {
   document.querySelector("#step1").classList.add("hidden2");
   document.querySelector("#step3").classList.add("hidden2");
   document.querySelector("#step2").classList.remove("hidden2");
+  document.querySelector("#step2-info").classList.add("txt-appear");
   document.querySelector("#next2").addEventListener("click", showStep3);
   document.querySelector("#prev2").addEventListener("click", showStep1);
 }
@@ -110,6 +111,7 @@ function showStep2() {
 function showStep1() {
   document.querySelector("#step2").classList.add("hidden2");
   document.querySelector("#step1").classList.remove("hidden2");
+  document.querySelector("#step1-info").classList.add("txt-appear");
   document.querySelector("#next1").addEventListener("click", showStep2);
 }
 
@@ -117,6 +119,7 @@ function showStep3() {
   document.querySelector("#step2").classList.add("hidden2");
   document.querySelector("#step4").classList.add("hidden2");
   document.querySelector("#step3").classList.remove("hidden2");
+  document.querySelector("#step3-info").classList.add("txt-appear");
   document.querySelector("#next3").addEventListener("click", showStep4);
   document.querySelector("#prev3").addEventListener("click", showStep2);
 }
@@ -124,5 +127,6 @@ function showStep3() {
 function showStep4() {
   document.querySelector("#step3").classList.add("hidden2");
   document.querySelector("#step4").classList.remove("hidden2");
+  document.querySelector("#step4-info").classList.add("txt-appear");
   document.querySelector("#prev4").addEventListener("click", showStep3);
 }
