@@ -16,6 +16,10 @@
 
 /* ANIMATIONS */
 
+.paused {
+  animation-play-state: paused;
+}
+
 .txt-appear {
   animation: text-appear 0.4s ease 1;
 }
@@ -61,6 +65,15 @@
   }
   to {
     right: 0;
+  }
+}
+
+@keyframes partner-slide {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-100vw);
   }
 }
 
@@ -126,6 +139,7 @@ section {
   width: 100vw;
   display: flex;
   justify-content: space-between;
+  z-index: 30;
 }
 
 #header span {
@@ -187,6 +201,7 @@ section {
   padding: 1rem;
   height: 92.6vh;
   width: 22vw;
+  z-index: 20;
 }
 
 .burger-menu ul li a {
@@ -460,4 +475,217 @@ section {
 .benefits-txt p {
   font-weight: 400;
   line-height: 2rem;
+}
+
+/* MKT CHANNEL SECTION */
+
+#mkt-channel {
+  padding-top: 11vh;
+  background-image: url("/assets/mkt-bg.svg");
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+#mkt-content h2 {
+  font-weight: 500;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--green);
+}
+
+#mkt-subtxt {
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--lightgrey);
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+
+#mkt-illustration {
+  position: relative;
+}
+
+.illustration {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+}
+
+/* PARTNERS SECTION */
+
+#partners {
+  padding-top: 11vh;
+  background-image: url("/assets/partners-bg.svg");
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+}
+
+#partners-slider h2 {
+  font-weight: 500;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--green);
+}
+
+#partners-ul {
+  padding-top: 15vw;
+  padding-left: 2vw;
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  gap: 2rem;
+  animation: partner-slide 20s linear infinite;
+}
+
+#partner-pop-up {
+  background: rgba(223, 221, 221, 0.719);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.2px);
+  -webkit-backdrop-filter: blur(4.2px);
+  border: 1px solid rgba(227, 227, 227, 0.65);
+  border-radius: 16px;
+  position: absolute;
+  width: 60vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#pop-up-container {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+#pop-up-logo {
+  margin: 2rem;
+}
+
+#close-button {
+  right: 5px;
+  position: absolute;
+  padding: 1rem;
+}
+
+#pop-up-txt {
+  padding-left: 2.2rem;
+  padding-bottom: 2rem;
+}
+
+#pop-up-txt h2 {
+  color: var(--green);
+  font-weight: 550;
+}
+
+#pop-up-txt h4 {
+  font-weight: 450;
+  width: max-content;
+  color: #504f4f;
+}
+
+#partner-ref {
+  margin-top: 0;
+  padding-right: 15%;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  font-weight: 550;
+  font-style: italic;
+  background-image: url("/assets/quote1.svg");
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+/* ABOUT US SECTION */
+
+#about-us {
+  padding-top: 11vh;
+  background-image: url("/assets/abus-bg.svg");
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#vision-txt h3 {
+  padding-left: 6rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--green);
+}
+
+#vision-txt p {
+  padding-left: 8rem;
+  width: 40%;
+  margin-bottom: 1.3rem;
+}
+
+#vision {
+  display: flex;
+  gap: 5rem;
+  text-align: center;
+  margin-left: 28%;
+  margin-top: 6rem;
+}
+
+#vision div h1 {
+  color: var(--yellow);
+  font-size: 4.5rem;
+}
+
+#vision div h4 {
+  color: var(--green);
+  font-size: 1.5rem;
+  line-height: 0.5rem;
+}
+
+/* DEMO SECTION */
+
+#demo-section {
+  padding-top: 5vh;
+  background-image: url("/assets/demo-bg.svg");
+  background-size: 105%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#form {
+  background: rgba(223, 221, 221, 0.295);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.2px);
+  -webkit-backdrop-filter: blur(4.2px);
+  border: 1px solid rgba(227, 227, 227, 0.65);
+  border-radius: 16px;
+  margin: 5% 12% 5% 12%;
+  padding: 2% 5% 5% 5%;
+}
+
+#form-txt h2 {
+  color: var(--green);
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 0.7rem;
+}
+
+#form-txt h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* FOOTER */
+
+#footer-ul {
+  display: flex;
+  justify-content: space-around;
 }

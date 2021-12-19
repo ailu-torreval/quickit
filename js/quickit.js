@@ -9,6 +9,34 @@ function gotData(restaurants) {
 
 function showRest(rest) {
   console.log(rest.address);
+  console.log(rest.logo.guid);
+  const shCard = document.querySelector("#partner-template").content;
+  const clone = shCard.cloneNode(true);
+  clone.querySelector(".partner-logo").src = rest.logo.guid;
+
+  const aEl = clone.querySelector(".partner-li");
+  aEl.addEventListener("click", showPopUp);
+  function showPopUp(e) {
+    e.preventDefault();
+    document.querySelector("#partners-ul").classList.add("paused");
+    document.querySelector("#partner-pop-up").classList.remove("hidden2");
+    document.querySelector("#partner-name").textContent = rest.r_name;
+    document.querySelector("#partner-address").textContent = rest.address;
+    document.querySelector("#partner-cuisine").textContent = rest.cuisine;
+    document.querySelector("#partner-ref").innerHTML = rest.review;
+    document.querySelector("#pop-up-logo").src = rest.logo.guid;
+    document
+      .querySelector("#close-button")
+      .addEventListener("click", closePopUp);
+  }
+  const parent = document.querySelector("#partners-ul");
+  parent.appendChild(clone);
+}
+
+function closePopUp() {
+  console.log("close button");
+  document.querySelector("#partner-pop-up").classList.add("hidden2");
+  document.querySelector("#partners-ul").classList.remove("paused");
 }
 
 document.querySelector("#next1").addEventListener("click", showStep2);

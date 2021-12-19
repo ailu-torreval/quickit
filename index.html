@@ -214,7 +214,7 @@
             <article class="benefits-slide hidden2" id="benefits-slide3">
                 <span class="arrow-prev" id="b-prev3"><i class="fas fa-chevron-left"></i></span>
                 <article class="benefit-card">
-                    <div class="benefit-txt">
+                    <div class="benefit-txt" id="benefit-txt3">
                         <div class="benefit-container">
                             <img src="/assets/easy-order-icon.png" alt="order icon" height="80">
                             <div class="benefits-txt">
@@ -243,44 +243,46 @@
             </article>
         </section>
         <section id="mkt-channel">
-            <div id="mkt-bg1"></div>
-            <div id="mkt-bg2"></div>
             <article id="mkt-content">
                 <h2>Quickit helps you connect with your guests.</h2>
-                <img src="/assets/web-art.svg" alt="illustration">
-                <img src="/assets/mkt-channel.png" alt="phone-mockup">
-                <h2 id="mkt-subtxt">An irreplaceable assistant in your restaurants.</h2>
+                <div id="mkt-illustration">
+                    <img src="/assets/web-art.svg" alt="illustration" height="500" class="illustration">
+                    <img src="/assets/mkt-channel.png" alt="phone-mockup" height="400" class="illustration">
+                </div>
+                <h3 id="mkt-subtxt">An irreplaceable assistant<br> in your restaurants.</h3>
             </article>
         </section>
         <section id="partners">
-            <div id="partner-bg1"></div>
-            <div id="partner-bg2"></div>
             <div id="partners-slider">
                 <h2>Quickit Partners</h2>
-                <ul id="partners">
+                <ul id="partners-ul">
                 </ul>
                 <template id="partner-template">
-                    <li class="partner-li"><img src="" alt="" class="partner-logo"></li>
+                    <li class="partner-li"><img src="" alt="" class="partner-logo" height="150"></li>
                 </template>
             </div>
             <div id="partner-pop-up" class="hidden2">
                 <span id="close-button"><i class="fas fa-times"></i></span>
-                <div id="partner-txt">
-                    <h2 id="partner-name"></h2>
-                    <h4 id="cuisine"></h4>
-                    <p id="ref"></p>
-                    <h4 id="address"></h4>
+                <div id="pop-up-container">
+                    <div id="partner-info">
+                        <img src="" alt="" id="pop-up-logo" height="200">
+                        <div id="pop-up-txt">
+                            <h2 id="partner-name"></h2>
+                            <h4 id="partner-cuisine"></h4>
+                            <h4 id="partner-address"></h4>
+                        </div>
+                    </div>
+                    <p id="partner-ref"></p>
                 </div>
-                <img src="" alt="" id="partner-pic">
             </div>
         </section>
         <section id="about-us">
-            <div id="vision-bg1"></div>
-            <div id="vision-bg2"></div>
             <div id="vision-txt">
-                <h3>Vision</h3>
-                <p>Allow guests to order and pay via their own smartphone.<br>
-                    Reduce bacterial spread and increase your turnover by 10%. </p>
+                <h3>VISION</h3>
+                <p>Quickit believes that digitalization is inevitable. We aim to be the tool to make digitalized service
+                    in restaurants more efficient and convenient, both for the business and the user.</p>
+                <p>We want to make Quickit an irreplaceable assistant in restaurants. Not only reducing waiting time for
+                    guests - but also enhancing the customer experience, by freeing up tasks for the waiters.</p>
             </div>
             <div id="vision" class="data">
                 <div id="app-installed">
@@ -298,39 +300,35 @@
             </div>
         </section>
         <section id="demo-section">
-            <div id="demo-bg1"></div>
-            <div id="demo-bg2"></div>
-            <div id="demo">
-                <div id="form">
-                    <div id="form-txt">
-                        <h2>Become a Quickit partner</h2>
-                        <h4>To book a free demo, provide us with your info and we will all you up.</h4>
-                    </div>
-                    <form action="index.html" method="post" class="contact-form">
-                        <label>
-                            Company Name <br>
-                            <input type="text" name="company-name"> <br>
-                        </label>
-                        <label>
-                            E-mail <br>
-                            <input type="email" name="email"><br>
-                        </label>
-                        <label>
-                            Telephone Number<br>
-                            <input type="tel" name="tel"><br>
-                        </label>
-                        <label>
-                            Contact Name<br>
-                            <input type="text" name="contact-name"><br>
-                        </label>
-                        <label>
-                            Aditional Info<br>
-                            <textarea name="message" placeholder="Your message here..."></textarea>
-                        </label>
-                        <br>
-                        <button type="submit">Submit</button>
-                    </form>
+            <div id="form">
+                <div id="form-txt">
+                    <h2>Become a Quickit Partner!</h2>
+                    <h4>To book a free demo, provide us with your info and we will call you up.</h4>
                 </div>
+                <form action="index.html" method="post" class="contact-form">
+                    <label>
+                        Company Name <br>
+                        <input type="text" name="company-name"> <br>
+                    </label>
+                    <label>
+                        E-mail <br>
+                        <input type="email" name="email"><br>
+                    </label>
+                    <label>
+                        Telephone Number<br>
+                        <input type="tel" name="tel"><br>
+                    </label>
+                    <label>
+                        Contact Name<br>
+                        <input type="text" name="contact-name"><br>
+                    </label>
+                    <label>
+                        Aditional Info<br>
+                        <textarea name="message" placeholder="Your message here..."></textarea>
+                    </label>
+                    <br>
+                    <button type="submit">Submit</button>
+                </form>
             </div>
             <footer>
                 <ul id="footer-ul">
