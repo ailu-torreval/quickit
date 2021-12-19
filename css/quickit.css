@@ -665,8 +665,8 @@ section {
   -webkit-backdrop-filter: blur(4.2px);
   border: 1px solid rgba(227, 227, 227, 0.65);
   border-radius: 16px;
-  margin: 5% 12% 5% 12%;
-  padding: 2% 5% 5% 5%;
+  margin: 5% 20% 5% 20%;
+  padding: 2% 5% 3% 5%;
 }
 
 #form-txt h2 {
@@ -683,9 +683,178 @@ section {
   margin-bottom: 1rem;
 }
 
+.form-grid {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.msg-input {
+  width: 40%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background: rgba(238, 238, 238, 0.699);
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.contact-form button {
+  padding: 0.7rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1rem;
+  background: linear-gradient(
+    180deg,
+    var(--green) 35%,
+    rgba(2, 145, 136, 0.6488970588235294) 100%
+  );
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 1px 5.5px 6.5px 2.5px var(--lightgrey);
+  color: white;
+  margin-left: 45%;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+#cia-name-container,
+#email-container,
+#tel-container,
+#contact-container {
+  width: 130%;
+  position: relative;
+  height: 2.8rem;
+  margin: 1rem;
+  overflow: hidden;
+}
+
+#cia-name-container input,
+#email-container input,
+#tel-container input,
+#contact-container input {
+  width: 100%;
+  height: 100%;
+  padding-top: 1.1rem;
+  font-size: 1.1rem;
+  border: none;
+  background: rgba(238, 238, 238, 0.699);
+  border-radius: 5px 5px 0 0;
+  outline: none;
+}
+
+#cia-name-container input:focus,
+#email-container input:focus,
+#tel-container input:focus,
+#contact-container input:focus,
+.msg-input:focus {
+  background: rgba(230, 230, 230, 0.699);
+}
+
+#cia-name-container label,
+#email-container label,
+#tel-container label,
+#contact-container label {
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  margin-top: 0;
+  border-bottom: 1px solid var(--green);
+  color: var(--green);
+}
+
+#cia-name-container label::after,
+#email-container label::after,
+#tel-container label::after,
+#contact-container label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  bottom: 0;
+  border-bottom: 1.5px solid var(--green);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.content-cia,
+.content-email,
+.content-tel,
+.content-contact {
+  position: absolute;
+  bottom: 1rem;
+  left: 0px;
+  transition: all 0.4s ease;
+}
+
+#cia-name-container input:focus + .cia-name .content-cia,
+#email-container input:focus + .email .content-email,
+#tel-container input:focus + .tel .content-tel,
+#contact-container input:focus + .contact-name .content-contact,
+#cia-name-container input:valid + .cia-name .content-cia,
+#email-container input:valid + .email .content-email,
+#tel-container input:valid + .tel .content-tel,
+#contact-container input:valid + .contact-name .content-contact {
+  transform: translateY(-30%);
+  font-size: 0.9rem;
+}
+
+#cia-name-container input:focus + .cia-name::after,
+#email-container input:focus + .email::after,
+#tel-container input:focus + .tel::after,
+#contact-container input:focus + .contact-name::after {
+  transform: translateX(0%);
+}
+
 /* FOOTER */
+
+footer {
+  background: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 
 #footer-ul {
   display: flex;
   justify-content: space-around;
+  list-style: none;
+}
+
+#first-ul li,
+#second-ul li,
+#third-ul li,
+#fourth-ul li {
+  list-style: none;
+}
+
+#first-ul li a,
+#second-ul li a,
+#third-ul li a,
+#fourth-ul li a {
+  text-decoration: none;
+  color: var(--offblack);
+  font-weight: 400;
+}
+
+#some-ul ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+#contact,
+#follow {
+  color: var(--green);
+  font-weight: 550;
+}
+
+#third-ul ul li span {
+  font-weight: 550;
 }

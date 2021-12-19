@@ -306,40 +306,49 @@
                     <h4>To book a free demo, provide us with your info and we will call you up.</h4>
                 </div>
                 <form action="index.html" method="post" class="contact-form">
-                    <label>
-                        Company Name <br>
-                        <input type="text" name="company-name"> <br>
-                    </label>
-                    <label>
-                        E-mail <br>
-                        <input type="email" name="email"><br>
-                    </label>
-                    <label>
-                        Telephone Number<br>
-                        <input type="tel" name="tel"><br>
-                    </label>
-                    <label>
-                        Contact Name<br>
-                        <input type="text" name="contact-name"><br>
-                    </label>
-                    <label>
-                        Aditional Info<br>
-                        <textarea name="message" placeholder="Your message here..."></textarea>
-                    </label>
-                    <br>
+                    <div class="form-grid">
+                        <div class="left-side">
+                            <div id="cia-name-container">
+                                <input type="text" name="company-name" autocomplete="off" required>
+                                <label for="comapny-name" class="cia-name">
+                                    <span class="content-cia">Company Name</span>
+                                </label>
+                            </div>
+                            <div id="email-container">
+                                <input type="email" name="email" autocomplete="off" required>
+                                <label for="email" class="email">
+                                    <span class="content-email">E-mail</span>
+                                </label>
+                            </div>
+                            <div id="tel-container">
+                                <input type="tel" name="tel" autocomplete="off" required>
+                                <label for="tel" class="tel">
+                                    <span class="content-tel">Telephone Nr.</span>
+                                </label>
+                            </div>
+                            <div id="contact-container">
+                                <input type="text" name="contact-name" autocomplete="off" required>
+                                <label for="contact-name" class="contact-name">
+                                    <span class="content-contact">Contact Name</span>
+                                </label>
+                            </div>
+                        </div>
+                        <textarea name="message" placeholder="Add aditional info here" class="msg-input"></textarea>
+                    </div>
+
                     <button type="submit">Submit</button>
                 </form>
             </div>
             <footer>
                 <ul id="footer-ul">
-                    <li id="1st-ul">
+                    <li id="first-ul">
                         <ul>
                             <li><a href="index.html">Home</a></li>
                             <li><a href="#tut-section">How It Works</a></li>
                             <li><a href="#benefits">Benefits</a></li>
                         </ul>
                     </li>
-                    <li id="2nd-ul">
+                    <li id="second-ul">
                         <ul>
                             <li><a href="#about-us">About Us</a>
                             </li>
@@ -349,16 +358,16 @@
                             </li>
                         </ul>
                     </li>
-                    <li id="3rd-ul">
+                    <li id="third-ul">
                         <ul>
                             <li id="contact">Contact</li>
-                            <li><span>Tel Nr:</span>+45 20710295</li>
+                            <li><span>Tel Nr: </span>+45 20710295</li>
                             <li><a href="mailto:ar@quick-it.dk">E-mail</a></li>
                         </ul>
                     </li>
-                    <li id="4th-ul">
+                    <li id="fourth-ul">
                         <ul>
-                            <li>Follow Us</li>
+                            <li id="follow">Follow Us</li>
                             <li id="some-ul">
                                 <ul>
                                     <li><i class="fab fa-facebook-square"></i></li>
