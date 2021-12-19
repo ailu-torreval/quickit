@@ -232,7 +232,7 @@ section {
 /* HERO SECTION */
 
 #hero-section {
-  background-image: url(/assets/hero-bg.svg);
+  background-image: url(../assets/hero-bg.svg);
   background-size: 120%;
   background-repeat: no-repeat;
   background-position: center top;
@@ -328,7 +328,7 @@ section {
 /* HOW TO USE IT SECTION */
 #tut-section {
   padding-top: 11vh;
-  background-image: url("/assets/tut-bg.svg");
+  background-image: url("../assets/tut-bg.svg");
   background-size: 110%;
   background-repeat: no-repeat;
   background-position: center;
@@ -407,7 +407,7 @@ section {
 
 #benefits {
   padding-top: 11vh;
-  background-image: url("/assets/benefits-bg.svg");
+  background-image: url("../assets/benefits-bg.svg");
   background-size: 110%;
   background-repeat: no-repeat;
   background-position: center;
@@ -481,7 +481,7 @@ section {
 
 #mkt-channel {
   padding-top: 11vh;
-  background-image: url("/assets/mkt-bg.svg");
+  background-image: url("../assets/mkt-bg.svg");
   background-size: 110%;
   background-repeat: no-repeat;
   background-position: center;
@@ -520,7 +520,7 @@ section {
 
 #partners {
   padding-top: 11vh;
-  background-image: url("/assets/partners-bg.svg");
+  background-image: url("../assets/partners-bg.svg");
   background-size: 110%;
   background-repeat: no-repeat;
   background-position: center;
@@ -599,7 +599,7 @@ section {
   padding-left: 1rem;
   font-weight: 550;
   font-style: italic;
-  background-image: url("/assets/quote1.svg");
+  background-image: url("../assets/quote1.svg");
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: left top;
@@ -609,7 +609,7 @@ section {
 
 #about-us {
   padding-top: 11vh;
-  background-image: url("/assets/abus-bg.svg");
+  background-image: url("../assets/abus-bg.svg");
   background-size: 110%;
   background-repeat: no-repeat;
   background-position: center;
@@ -652,7 +652,7 @@ section {
 
 #demo-section {
   padding-top: 5vh;
-  background-image: url("/assets/demo-bg.svg");
+  background-image: url("../assets/demo-bg.svg");
   background-size: 105%;
   background-repeat: no-repeat;
   background-position: center;
