@@ -971,7 +971,7 @@ footer {
 
   /* hero section */
   #hero-section {
-    background-image: url("/assets/hero-mbg.svg");
+    background-image: url("../assets/hero-mbg.svg");
     background-size: 100%;
     padding-top: 10vh;
   }
@@ -1005,7 +1005,7 @@ footer {
   /* tut section */
 
   #tut-section {
-    background-image: url("/assets/tut-mbg.svg");
+    background-image: url("../assets/tut-mbg.svg");
     background-size: 100%;
   }
 
@@ -1020,7 +1020,7 @@ footer {
   /* benefits */
 
   #benefits {
-    background-image: url("/assets/benefits-mbg.svg");
+    background-image: url("../assets/benefits-mbg.svg");
     background-size: 100%;
   }
 
@@ -1054,7 +1054,7 @@ footer {
   /* mkt channel section */
 
   #mkt-channel {
-    background-image: url("/assets/mkt-mbg1.svg");
+    background-image: url("../assets/mkt-mbg1.svg");
   }
 
   #mkt-channel h2 {
@@ -1074,7 +1074,7 @@ footer {
   /* partners section */
 
   #partners {
-    background-image: url("/assets/partners-mbg.svg");
+    background-image: url("../assets/partners-mbg.svg");
     background-size: 100%;
   }
 
@@ -1135,7 +1135,7 @@ footer {
   /* ABOUT US */
 
   #about-us {
-    background-image: url("/assets/abus-mbg.svg");
+    background-image: url("../assets/abus-mbg.svg");
     background-size: 100%;
   }
   #vision-txt p {
@@ -1162,7 +1162,7 @@ footer {
   /* DEMO SECTION  */
 
   #demo-section {
-    background-image: url("/assets/form-mbg.svg");
+    background-image: url("../assets/form-mbg.svg");
     background-size: 100%;
   }
 
