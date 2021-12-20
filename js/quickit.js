@@ -16,9 +16,8 @@ function showRest(rest) {
 
   const aEl = clone.querySelector(".partner-li");
   aEl.addEventListener("click", showPopUp);
-  function showPopUp(e) {
-    e.preventDefault();
-    document.querySelector("#partners-ul").classList.add("paused");
+  function showPopUp() {
+    // e.preventDefault();
     document.querySelector("#partner-pop-up").classList.remove("hidden2");
     document.querySelector("#partner-name").textContent = rest.r_name;
     document.querySelector("#partner-address").textContent = rest.address;
@@ -36,13 +35,12 @@ function showRest(rest) {
 function closePopUp() {
   console.log("close button");
   document.querySelector("#partner-pop-up").classList.add("hidden2");
-  document.querySelector("#partners-ul").classList.remove("paused");
 }
 
 document.querySelector("#next1").addEventListener("click", showStep2);
 document.querySelector("#burger-icon").addEventListener("click", showMenu);
 document.querySelector("#b-next1").addEventListener("click", showBenefits2);
-// document.querySelector("#b-prev1").addEventListener("click", showBenefits3);
+document.querySelector("#b-prev1").addEventListener("click", showBenefits3);
 
 function showBenefits2() {
   document.querySelector("#benefits-slide1").classList.add("hidden2");
@@ -125,6 +123,7 @@ function showStep3() {
 }
 
 function showStep4() {
+  document.querySelector("#next4").classList.add("hidden");
   document.querySelector("#step3").classList.add("hidden2");
   document.querySelector("#step4").classList.remove("hidden2");
   document.querySelector("#step4-info").classList.add("txt-appear");

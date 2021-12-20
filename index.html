@@ -10,7 +10,7 @@
     <title>QuickIt</title>
 </head>
 
-<body>
+<body id="body">
     <header id="header">
         <a href="index.html"><img src="./assets/quickit-logo-green.png" alt="qck-logo" height="50"></a>
         <div id="header-container">
@@ -27,6 +27,8 @@
             <li><a href="#mkt-channel" id="mkt-btn">Our Marketing Channel</a></li>
             <li><a href="#about-us" id="abus-btn">About Us</a></li>
             <li><a href="#demo-section" id="demo-btn">Contact Us</a></li>
+            <li id="burger-cta"><button><a href="#demo-section">Book Demo</a></button>
+            </li>
         </ul>
         <ul class="some-icons">
             <li><a href="https://www.instagram.com/quickit.dk/"><i class="fab fa-facebook-square"></i></a></li>
@@ -48,13 +50,13 @@
                     <img src="./assets/hero-img.png" alt="phone mockups" id="hero-img" height="500">
                 </div>
             </article>
-            <div id="arrow-down"><i class="fas fa-chevron-down"></i></div>
+            <div id="arrow-down"><a href="#tut-section"><i class="fas fa-chevron-down"></i></a></div>
         </section>
         <section id="tut-section">
             <h2>The <span>quickest</span> and <span>fastest</span> way<br> to order and buy.</h2>
             <article id="step1">
                 <article class="tut-steps">
-                    <span id="prev1" class="arrow-prev"><i class="fas fa-chevron-left"></i></span>
+                    <span id="prev1" class="arrow-prev hidden"><i class="fas fa-chevron-left"></i></span>
                     <div class="step-info" id="step1-info">
                         <img src="./assets/step1.png" alt="step1" height="400">
                         <ol class="steps-description">
@@ -76,6 +78,7 @@
                     </ul>
                 </div>
             </article>
+            <div class="go-up"><a href="index.html"><i class="fas fa-chevron-up"></i></a></div>
             <article id="step2" class="hidden2">
                 <article class="tut-steps">
                     <span id="prev2" class="arrow-prev"><i class="fas fa-chevron-left"></i></span>
@@ -246,7 +249,8 @@
             <article id="mkt-content">
                 <h2>Quickit helps you connect with your guests.</h2>
                 <div id="mkt-illustration">
-                    <img src="./assets/web-art.svg" alt="illustration" height="500" class="illustration">
+                    <img src="./assets/web-art.svg" alt="illustration" height="500" class="illustration"
+                        id="mkt-drawing">
                     <img src="./assets/mkt-channel.png" alt="phone-mockup" height="400" class="illustration">
                 </div>
                 <h3 id="mkt-subtxt">An irreplaceable assistant<br> in your restaurants.</h3>
@@ -370,9 +374,11 @@
                             <li id="follow">Follow Us</li>
                             <li id="some-ul">
                                 <ul>
-                                    <li><i class="fab fa-facebook-square"></i></li>
-                                    <li><i class="fab fa-instagram-square"></i></li>
-                                </ul>
+                                    <li><a href="https://www.instagram.com/quickit.dk/"><i
+                                                class="fab fa-facebook-square"></i></a></li>
+                                    <li><a href="https://www.instagram.com/quickit.dk/"><i
+                                                class="fab fa-instagram-square"></i></a></li>
+
                             </li>
                         </ul>
                     </li>
